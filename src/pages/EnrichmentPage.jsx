@@ -24,7 +24,8 @@ const EnrichmentPage = () => {
         setIsLoading(true);
 
         try {
-          const response = await fetch("https://30f3-34-73-242-53.ngrok-free.app/enrich-leads", {
+        // Example link api : https://30f3-34-73-242-53.ngrok-free.app/generate-leads
+          const response = await fetch("((YOUR API))/enrich-leads", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

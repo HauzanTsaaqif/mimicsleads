@@ -72,7 +72,8 @@ const GenerateLeads = () => {
     formData.append("description", description);
 
     try {
-      const response = await fetch("https://30f3-34-73-242-53.ngrok-free.app/generate-leads", {
+        // Example link api : https://30f3-34-73-242-53.ngrok-free.app/generate-leads
+        const response = await fetch("((YOUR API))/generate-leads", {
         method: "POST",
         body: formData,
       });

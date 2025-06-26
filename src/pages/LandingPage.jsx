@@ -68,7 +68,7 @@ const LandingPage = () => {
                 <iframe
                     width="100%"
                     height="100%"
-                    src="https://www.youtube.com/embed/VIDEO_ID"
+                    src="https://www.youtube.com/embed/4cr4sBc51B0"
                     title="How to Use MimicsLeads"
                     frameBorder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"

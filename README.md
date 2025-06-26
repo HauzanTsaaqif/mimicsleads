@@ -1,35 +1,36 @@
-# 🎓 SkuleMate — AI-Powered Scholarship Finder
+# 🎯 **MimicsLeads — AI-Powered Lead Generation Tool**
 
-**SkuleMate** is an intelligent scholarship search platform designed to simplify and personalize the way users find scholarships. Powered by **Natural Language Processing** and **custom-trained AI models**, SkuleMate analyzes your profile or CV and matches it with thousands of curated scholarships using **semantic similarity** — no more manual searching.
+**MimicsLeads** is an intelligent lead generation platform designed to help businesses find the right leads faster and more efficiently. Powered by **Natural Language Processing (NLP)** and **custom-trained AI models**, MimicsLeads matches your profile description with thousands of curated leads based on **semantic similarity** — no more tedious manual searching.
 
-> 🧠 Just upload your CV or write a short bio. Let the AI find your best-fit scholarships.
+> 🧠 Upload your company description or provide a short bio. Let the AI find your best-fit leads in seconds.
 
-<img src="public/img_1.png" alt="Nutriject Homepage" width="100%"/>
+<img src="public/img_1.png" alt="MimicsLeads Homepage" width="100%"/>
 
 ---
 
-## 🚀 Key Features
+## 🚀 **Key Features**
 
-- 🤖 **AI-Powered Matching**: Automatically matches your profile with scholarship descriptions using sentence embedding techniques.
-- 📄 **CV or Text Input**: Upload your resume or describe yourself manually.
-- 🔍 **Smart Retrieval**: Uses semantic search with SBERT to find scholarships with the highest relevance.
+- 🤖 **AI-Powered Matching**: Automatically matches your profile with lead descriptions using semantic embedding techniques.
+- 📄 **Company Description or Text Input**: Upload your company profile or describe your ideal lead manually.
+- 🔍 **Smart Retrieval**: Uses **SBERT** (Sentence-BERT) semantic search to find the most relevant leads.
 - 🌐 **Built with Next.js**: A modern, performant, and scalable frontend framework.
 
 ---
 
-## 🧠 The AI Model
+## 🧠 **The AI Model**
 
-The core matching engine uses **Sentence-BERT (SBERT)** fine-tuned on a **custom-mined scholarship dataset**. It evaluates the semantic similarity between user input and scholarship descriptions to deliver precise results.
+The core matching engine uses **Sentence-BERT (SBERT)** fine-tuned on a **custom-mined lead dataset**. It evaluates the semantic similarity between user input and lead descriptions to deliver highly accurate results.
 
-- 🤗 Model Hosted on Hugging Face:  
-  🔗 https://huggingface.co/hauzantsaaqif/beasiswa_sbert
+- 🤗 **Model Hosted on Hugging Face**:  
+  🔗 [MimicsLeads Model on Hugging Face](https://huggingface.co/hauzantsaaqif/company_desc_needs)
 
-- 📚 Custom dataset from large-scale scholarship data mining
-- 🔍 Embedding-based similarity matching
+- 📚 **Custom dataset mined from large-scale lead data**
+- 🔍 **Embedding-based similarity matching**: To match descriptions with the most relevant leads, the model uses semantic similarity based on Sentence-BERT embeddings.
+- 🤖 **Pre-trained Model**: The core model used in MimicsLeads is sentence-transformers/all-MiniLM-L6-v2, a pre-trained model that has been fine-tuned to better understand and compare company descriptions with potential leads. This model leverages transformer-based architecture for efficient sentence-level embeddings, which enables precise matching and ranking of leads based on text descriptions.
 
 ---
 
-## 🛰️ Model Deployment (Server)
+## 🛰️ **Model Deployment (Server)**
 
 The backend model is served via:
 
@@ -40,36 +41,47 @@ The backend model is served via:
 To deploy the model:
 
 1. Open the Colab notebook:  
-   [📓 Colab Server Notebook](https://colab.research.google.com/drive/1ekhncbLWpavb7338ltb2KOqeu4QILDmE?usp=sharing)
+   [📓 Colab Server Notebook](https://colab.research.google.com/drive/1rKuB3zvjuqfuZ3PgZDAEyMLi7XRvK4tk?usp=sharing)
 
-2. Mount Google Drive using the shared model files:  
-   [📁 Model Drive Folder](https://drive.google.com/drive/folders/1BfqavA0YotO5Sg02tt5UHvdzF2BZjdis?usp=sharing)
+2. Replace the **NGROK_AUTH_TOKEN** with your own key when prompted.
+   You can generate your own Ngrok Auth Token by signing up at Ngrok.
 
-3. Replace the `NGROK_AUTH_TOKEN` with your own key when prompted
+3. Replace the Hugging Face API Key with your own.
+   You can obtain an API key by signing up at Hugging Face.
 
-4. Copy the **Ngrok Public URL** once the server starts
+4. Run the Setup Model Cell:
+   This will configure the model for use with the API and prepare it for inference.
+
+5. Run the Setup Server Cell:
+   This will start the server and generate the Ngrok Public URL.
+
+6. Copy the Ngrok Public URL:
+   Once the server starts, you will see the Ngrok Public URL. Copy this URL.
+
+Integrate the API Link into Your Project:
+Paste the Ngrok Public URL into your MimicsLeads project under the API configuration to connect website with the backend server.
 
 ---
 
-## 🧑‍💻 Running the Web App (Next.js)
+## 🧑‍💻 **Running the Web App (Next.js)**
 
-To use the SkuleMate Web Interface:
+To use the **MimicsLeads** Web Interface:
 
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/ArditBaskara/skuleMate.git
-   cd skuleMate
+   git clone https://github.com/hauzantsaaqif/mimicsleads.git
+   cd mimicsleads
 
    ```
 
 2. **Update the API URL**:  
    Replace all model API URLs with the Ngrok Public URL you copied from Colab.
 
-Edit the following files:
+   Edit the following files:
 
-- `app/api/detectCV/route.ts`
-- `app/api/detectText/route.ts`
+- `src\pages\LandingPage.jsx`
+- `src\pages\EnrichmentPage.jsx`
 
 3. **Install dependencies**:
 
@@ -101,14 +113,8 @@ Now, you're ready to test the app. Upload a food image and watch Nutriject break
 
 ---
 
-## 🖼️ Example Usage
-
-1. **Input CV (PDF/text) or a brief self-description**
-2. **AI matches your profile with top scholarships**
-3. **Instantly receive tailored recommendations**
-
 📺 **For a full demonstration, watch the documentation video here**:  
-[👉 SkuleMate Demo on YouTube](https://youtu.be/SYM3-IZIcdc)
+[👉 SkuleMate Demo on YouTube](https://youtu.be/4cr4sBc51B0)
 
 ---
 

@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+.text-shadow-lg {
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+.btn-primary {
+  background: linear-gradient(to right, #56ccf2, #2f80ed);
+  border-radius: 5px;
+  padding: 12px 36px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  width: auto;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to right, #2f80ed, #56ccf2);
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+@media (max-width: 640px) {
+  .text-shadow-lg {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .btn-primary {
+    padding: 10px 30px;
+    font-size: 16px;
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.container {
+  max-width: 1100px;
+}
+
+.z-0{
+  z-index: -1;
+}
+
+.custom-checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc; 
+  border-radius: 4px;
+  position: relative; 
+  background-color: transparent; 
+  transition: all 0.3s ease;
+}
+
+.custom-checkbox:checked {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+.custom-checkbox:checked::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 7px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.custom-checkbox:hover {
+  border-color: #2196F3;
+}
+
+.custom-checkbox:focus {
+  outline: none;
+  border-color: #2196F3;
+}
+
+.custom-checkbox:active {
+  transform: scale(0.95);
+}
+
+/* Spinner animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+}
+
+.loading-card{
+  top: 50%;
+  left: 50%;
+}

@@ -1,0 +1,36 @@
+.btn-primary {
+  background: linear-gradient(to right, #56ccf2, #2f80ed);
+  border-radius: 5px;
+  padding: 12px 36px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to right, #2f80ed, #56ccf2);
+  cursor: pointer;
+}
+
+nav a:hover {
+  color: #60a5fa;
+  transition: color 0.3s ease;
+}
+
+table th, table td {
+  padding: 12px;
+  border: 1px solid #4A4A4A;
+}
+
+
+table tbody tr:hover {
+  background-color: oklch(35.521% 0.0409 238.691);
+}
+
+@media (max-width: 640px) {
+  .btn-primary {
+    padding: 10px 30px;
+    font-size: 16px;
+  }
+}

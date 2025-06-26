@@ -63,7 +63,7 @@ Paste the Ngrok Public URL into your MimicsLeads project under the API configura
 
 ---
 
-## 🧑‍💻 **Running the Web App (Next.js)**
+## 🧑‍💻 **Running the Web App**
 
 To use the **MimicsLeads** Web Interface:
 

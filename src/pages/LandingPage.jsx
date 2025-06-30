@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/index.css';
+import { Link } from 'react-scroll';
 
 const LandingPage = () => {
   return (
@@ -16,8 +17,20 @@ const LandingPage = () => {
           
           {/* Menu */}
           <ul className="flex space-x-8">
-            <li><a href="#about-us" className="hover:text-blue-400">About Us</a></li>
-            <li><a href="#how-to-use" className="hover:text-blue-400">How to Use</a></li>
+            <li><Link 
+              to="about-us" 
+              smooth={true} 
+              duration={500} 
+              className="hover:text-blue-400">
+              About Us
+            </Link></li>
+            <li><Link 
+              to="how-to-use" 
+              smooth={true} 
+              duration={500} 
+              className="hover:text-blue-400">
+              How to Use
+            </Link></li>
             <li><a href="/generate_leads" className="hover:text-blue-400">Generate Leads</a></li>
             <li><a href="/setting_page" className="hover:text-blue-400">Settings</a></li>
           </ul>

@@ -5,9 +5,16 @@ const LandingPage = () => {
   return (
     <section className="relative flex flex-col justify-start items-center min-h-screen text-center bg-gray-800 grid grid-cols-8">
       {/* Navbar */}
-      <nav className="w-full bg-gray-900 text-white py-4 col-start-1 col-end-9">
+      <nav className="w-full bg-gray-900 text-white col-start-1 col-end-9">
         <div className="container mx-auto flex justify-between items-center">
-          <a href="/" className="text-2xl font-bold">MimicsLeads</a>
+          {/* Logo dan Title */}
+          <a href="/" className="flex items-center text-2xl font-bold">
+            {/* Logo */}
+            <img src="/icon.png" alt="Logo" className="mr-4 max-h-20" /> {/* Sesuaikan path dan ukuran logo */}
+            MimicsLeads
+          </a>
+          
+          {/* Menu */}
           <ul className="flex space-x-8">
             <li><a href="#about-us" className="hover:text-blue-400">About Us</a></li>
             <li><a href="#how-to-use" className="hover:text-blue-400">How to Use</a></li>

@@ -24,25 +24,28 @@ const EnrichmentPage = () => {
         setIsLoading(true);
 
         try {
-        // Example link api : https://30f3-34-73-242-53.ngrok-free.app/generate-leads
-          const response = await fetch("((YOUR API))/enrich-leads", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(formData),
-          });
+          const storedApi = sessionStorage.getItem('apiLink');
+          if (storedApi) {
+            const response = await fetch(`${storedApi}/enrich-leads`, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(formData),
+            });
 
-          if (response.ok) {
-            const result = await response.json();
-            console.log("Enrichment result:", result);
+            if (response.ok) {
+              const result = await response.json();
 
-            setEnrichedData(result.data);
-          } else {
-            console.log("Failed to enrich leads");
+              setEnrichedData(result.data);
+            } else {
+              console.log("Failed to enrich leads");
+            alert("Failed to enrich leads");
+            }
           }
         } catch (error) {
           console.error("Error during fetch:", error);
+          alert("Error during fetch");
         } finally {
             setIsLoading(false);
         }

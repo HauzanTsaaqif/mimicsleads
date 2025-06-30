@@ -72,20 +72,22 @@ const GenerateLeads = () => {
     formData.append("description", description);
 
     try {
-        // Example link api : https://30f3-34-73-242-53.ngrok-free.app/generate-leads
-        const response = await fetch("((YOUR API))/generate-leads", {
-        method: "POST",
-        body: formData,
-      });
+        const storedApi = sessionStorage.getItem('apiLink');
+        if (storedApi) {
+          const response = await fetch(`${storedApi}/generate-leads`, {
+            method: "POST",
+            body: formData,
+          });
 
-      const result = await response.json();
-      console.log(result);
+        const result = await response.json();
+        console.log(result);
 
-      if (result.status === "success") {
-        setLeads(result.data);
-      } else {
-        alert("Failed to generate leads");
-      }
+        if (result.status === "success") {
+          setLeads(result.data);
+        } else {
+          alert("Failed to generate leads");
+        }
+      };
     } catch (error) {
       console.error("Error during fetch:", error);
       alert("An error occurred. Please try again.");

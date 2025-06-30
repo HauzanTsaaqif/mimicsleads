@@ -9,7 +9,7 @@ import Settings from './pages/Settings';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Router>
+    <Router basename="/">
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/generate_leads" element={<GenerateLeads />} />

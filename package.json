@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "react-scripts build",
     "lint": "eslint .",
     "preview": "vite preview",
-  "start": "react-scripts start",
-  "deploy": "vercel --prod"
+    "start": "react-scripts start",
+    "deploy": "vercel --prod"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.10",

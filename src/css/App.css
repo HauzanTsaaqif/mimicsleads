@@ -113,3 +113,42 @@
   top: 50%;
   left: 50%;
 }
+
+.icon-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Memberikan jarak antara kotak ikon */
+  flex-wrap: wrap; /* Agar responsif pada ukuran layar kecil */
+  padding: 10px 0;
+}
+
+.social-item {
+  border-radius: 8px; /* Sudut melengkung pada kotak */
+  display: flex;
+  align-items: center; /* Menyusun ikon dan teks secara vertikal */
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.social-item a {
+  color: #fff;
+  text-decoration: none; /* Menghapus garis bawah dari link */
+  display: flex;
+  align-items: center;
+}
+
+.social-item .social-icon {
+  width: 24px;  /* Atur ukuran ikon sesuai kebutuhan */
+  height: 24px; /* Menjaga proporsi gambar */
+  margin-right: 8px; /* Memberikan ruang antara ikon dan teks */
+}
+
+.social-name {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .icon-list {
+    flex-direction: column;
+  }
+}

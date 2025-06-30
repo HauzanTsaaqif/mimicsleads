@@ -84,7 +84,7 @@ const Settings = () => {
               <a href={savedApi} className="underline text-blue-400" target="_blank" rel="noopener noreferrer">
                 {savedApi}
               </a>
-              <p className="text-sm text-green-400 mt-2">Link aktif dan tersimpan di sesi saat ini.</p>
+              <p className="text-sm text-green-400 mt-2">Links are active and saved in the current session.</p>
             </div>
           )}
         </div>

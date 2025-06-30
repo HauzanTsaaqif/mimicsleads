@@ -100,6 +100,67 @@ const LandingPage = () => {
             </div>
         </div>
 
+        <div id="about-me" className="container mx-auto px-6 py-8 bg-gray-900 p-6 rounded-lg shadow-lg text-white rounded-lg mt-12 col-start-1 col-end-9">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center">About Me</h2>
+          
+          <div >
+            {/* Profile Image */}
+            <div className="flex flex-col sm:flex-row justify-center items-center py-4 px-8">
+              <div className="min-w-1/4 h-64 mb-6 sm:mb-0 sm:mr-8">
+                <img src="/self/1.jpg" alt="Profile" className="w-full h-full object-cover rounded-full" />
+              </div>
+
+              {/* Content */}
+              <div className="min-w-3/4 text-center sm:text-left">
+                <h3 className="text-2xl font-semibold mb-4">ML Engineer – Web Deployment Specialist</h3>
+                <p className="italic text-lg py-3">"Every time is precious, so don't waste it"</p>
+                
+                <p className="text-lg mb-4">
+                  I am a passionate ML Engineer and Web Deployment Specialist based in Indonesia. I have a strong background in deploying machine learning models into production environments, with expertise in building scalable web applications. 
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-5 content-stretch sm:flex-row gap-4 mt-6">
+                <div className="social-item p-4 bg-gray-700 hover:bg-blue-500">
+                    <a href="https://www.instagram.com/hauzantsaaqif" target="_blank" rel="noopener noreferrer">
+                    <img src="\icon\5.png" alt="Instagram" className="social-icon" />
+                    <span className="social-name">@hauzantsaaqif</span>
+                    </a>
+                </div>
+                
+                <div className="social-item p-4 bg-gray-700 hover:bg-blue-500">
+                    <a href="https://www.linkedin.com/in/hauzan-tsaaqif-mushaddaq" target="_blank" rel="noopener noreferrer">
+                    <img src="\icon\1.png" alt="LinkedIn" className="social-icon" />
+                    <span className="social-name">LinkedIn</span>
+                    </a>
+                </div>
+                
+                <div className="social-item p-4 bg-gray-700 hover:bg-blue-500">
+                    <a href="https://github.com/HauzanTsaaqif" target="_blank" rel="noopener noreferrer">
+                    <img src="\icon\4.png" alt="GitHub" className="social-icon" />
+                    <span className="social-name">Github</span>
+                    </a>
+                </div>
+                
+                {/* New Social Media */}
+                <div className="social-item p-4 bg-gray-700 hover:bg-blue-500">
+                    <a href="https://huggingface.co/hauzantsaaqif" target="_blank" rel="noopener noreferrer">
+                    <img src="\icon\2.png" alt="Hugging Face" className="social-icon" />
+                    <span className="social-name">Hugging Face</span>
+                    </a>
+                </div>
+                
+                <div className="social-item p-4 bg-gray-700 hover:bg-blue-500">
+                    <a href="https://devpost.com/HauzanTsaaqif" target="_blank" rel="noopener noreferrer">
+                    <img src="\icon\3.png" alt="Devpost" className="social-icon" />
+                    <span className="social-name">Devpost</span>
+                    </a>
+                </div>
+            </div>
+          </div>
+        </div>
+
       {/* Footer */}
       <footer className="w-full bg-gray-900 text-white py-4 mt-6 col-start-1 col-end-9">
         <div className="container mx-auto text-center">

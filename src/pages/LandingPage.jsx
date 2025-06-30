@@ -22,7 +22,7 @@ const LandingPage = () => {
               smooth={true} 
               duration={500} 
               className="hover:text-blue-400">
-              About Us
+              About Me
             </Link></li>
             <li><Link 
               to="how-to-use" 
@@ -63,7 +63,7 @@ const LandingPage = () => {
         <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
         </div>
 
-        <div id="about-us" className="container mx-auto px-10 py-8 bg-gray-900 p-6 rounded-lg shadow-lg text-white rounded-lg mt-12 col-start-1 col-end-9">
+        <div className="container mx-auto px-10 py-8 bg-gray-900 p-6 rounded-lg shadow-lg text-white rounded-lg mt-12 col-start-1 col-end-9">
             <h2 className="text-3xl sm:text-4xl font-bold text-center mb-6">How the System Works</h2>
             <p className="text-lg sm:text-xl text-gray-200 text-center mx-auto mb-6">
                 MimicsLeads is an advanced application designed to revolutionize the way businesses manage and generate high-quality leads. 
@@ -100,7 +100,7 @@ const LandingPage = () => {
             </div>
         </div>
 
-        <div id="about-me" className="container mx-auto px-6 py-8 bg-gray-900 p-6 rounded-lg shadow-lg text-white rounded-lg mt-12 col-start-1 col-end-9">
+        <div id="about-us" className="container mx-auto px-6 py-8 bg-gray-900 p-6 rounded-lg shadow-lg text-white rounded-lg mt-12 col-start-1 col-end-9">
           <h2 className="text-3xl sm:text-4xl font-bold text-center">About Me</h2>
           
           <div >

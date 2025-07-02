@@ -40,12 +40,20 @@ const Settings = () => {
         </div>
       </nav>
 
-      <div id="how-to-use" className="container mx-auto px-6 py-8 bg-gray-900 p-6 rounded-lg shadow-lg text-white rounded-lg mt-20 mb-20 col-start-1 col-end-9">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-6">How to Use the Settings</h2>
-        <ol className="list-decimal text-lg sm:text-xl text-gray-200 text-left mx-auto mb-6 px-20">
-          <li>Enter your API link in the field below.</li>
-          <li>Click the "Save API" button to store the link in your settings.</li>
-          <li>The saved API link will be stored in your session, allowing you to access it later.</li>
+      <div id="how-to-use" className="container mx-auto px-6 py-8 bg-gray-900 p-6 rounded-lg shadow-lg text-white mt-20 mb-20 col-start-1 col-end-9">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-6">How to Settings</h2>
+        <ol className="list-decimal text-lg sm:text-xl text-gray-200 text-left mx-auto mb-6 px-20 space-y-3">
+          <li>Create an account at <a href="https://ngrok.com/" target="_blank" rel="noopener noreferrer" className="underline text-blue-400">https://ngrok.com/</a> and copy your NGROK Auth Token. <strong>(See example image)</strong></li>
+          <div className='flex justify-center'><img src="/Tutor1.png" alt="Logo" className="mr-4 max-h-50" /></div>
+          <li>Open the AI server on Colab using this link: <a href="https://colab.research.google.com/drive/1rKuB3zvjuqfuZ3PgZDAEyMLi7XRvK4tk?usp=sharing#scrollTo=RddER8iVL4jn" target="_blank" rel="noopener noreferrer" className="underline text-blue-400">Colab Server Link</a></li>
+          <li>Paste your NGROK token into the input field provided in the Colab notebook.</li>
+          <li>Connect to the Colab runtime (GPU is not required).</li>
+          <li>Press <code>Ctrl + F9</code> or go to <strong>Runtime &gt; Run all</strong> to execute all cells.  <strong>(See example image)</strong></li>
+          <div className='flex justify-center'><img src="/Tutor2.png" alt="Logo" className="mr-4 max-h-50" /></div>
+          <li>Wait until an API link appears. Copy the generated API link. <strong>(See example image)</strong></li>
+          <div className='flex justify-center'><img src="/Tutor3.png" alt="Logo" className="mr-4 max-h-50" /></div>
+          <li>Paste the copied API link into the settings input field below on this page and click save API.</li>
+          <li>Once saved, you’re ready to start generating leads.</li>
         </ol>
 
         {/* API Settings Card */}

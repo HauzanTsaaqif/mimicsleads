@@ -73,6 +73,13 @@ const GenerateLeads = () => {
 
     try {
         const storedApi = sessionStorage.getItem('apiLink');
+        if (!storedApi) {
+          alert("API link belum disetting. Silakan pergi ke halaman setting untuk menyetting.");
+
+          window.location.href = "/setting_page";
+          return;
+        }
+
         if (storedApi) {
           const response = await fetch(`${storedApi}/generate-leads`, {
             method: "POST",
@@ -312,7 +319,7 @@ const GenerateLeads = () => {
         
       </div>
 
-      <footer className="w-full bg-gray-900 text-white py-8 mt-12 col-start-1 col-end-7">
+      <footer className="w-full bg-gray-900 text-white py-8 mt-12 col-start-1 col-end-9">
         <div className="container mx-auto text-center">
           <p>&copy; 2025 MimicsLeads. All Rights Reserved.</p>
           <p className="text-sm">Contact us: info@mimicsleads.com</p>

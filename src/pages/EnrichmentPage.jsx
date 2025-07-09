@@ -25,6 +25,14 @@ const EnrichmentPage = () => {
 
         try {
           const storedApi = sessionStorage.getItem('apiLink');
+          
+          if (!storedApi) {
+            alert("API link belum disetting. Silakan pergi ke halaman setting untuk menyetting.");
+
+            window.location.href = "/setting_page";
+            return;
+          }
+
           if (storedApi) {
             const response = await fetch(`${storedApi}/enrich-leads`, {
               method: "POST",

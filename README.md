@@ -69,7 +69,7 @@ Welcome to MimicsLeads! Follow the steps below to get started and set up your AP
 
 ### 1. **Visit the Website**
 
-- Go to the Nutriject Web App at [https://mimicsleads.vercel.app/](https://mimicsleads.vercel.app/).
+- Go to the MimicsLeads Web App at [https://mimicsleads.vercel.app/](https://mimicsleads.vercel.app/).
 
 ### 2. **Go to the Settings Page**
 
@@ -81,7 +81,7 @@ Welcome to MimicsLeads! Follow the steps below to get started and set up your AP
 - Once logged in, copy your **NGROK Auth Token**.  
   **(See example image below)**
 
-<img src="public/Tutor1.png" alt="Nutriject Output Example" width="100%"/>
+<img src="public/Tutor1.png" alt="MimicsLeads Output Example" width="100%"/>
 
 ### 4. **Open the AI Server on Colab**
 
@@ -102,14 +102,14 @@ Welcome to MimicsLeads! Follow the steps below to get started and set up your AP
 - Press `Ctrl + F9` or go to **Runtime > Run all** to execute all cells in the Colab notebook.  
   **(See example image below)**
 
-<img src="public/Tutor2.png" alt="Nutriject Output Example" width="100%"/>
+<img src="public/Tutor2.png" alt="MimicsLeads Output Example" width="100%"/>
 
 ### 8. **Copy the Generated API Link**
 
 - Wait for the API link to appear. Once it does, copy the generated link.  
   **(See example image below)**
 
-<img src="public/Tutor3.png" alt="Nutriject Output Example" width="100%"/>
+<img src="public/Tutor3.png" alt="MimicsLeads Output Example" width="100%"/>
 
 ### 9. **Paste the API Link in Settings**
 
@@ -162,11 +162,11 @@ To use the **MimicsLeads** Web Interface:
 
    ```
 
-Now, you're ready to test the app. Upload a food image and watch Nutriject break down the nutrition info automatically! 🍱
+Now, you're ready to test the app. Upload a food image and watch MimicsLeads break down the nutrition info automatically! 🍱
 
 ## Example Output
 
-<img src="public/img_2.png" alt="Nutriject Output Example" width="100%"/>
+<img src="public/img_2.png" alt="MimicsLeads Output Example" width="100%"/>
 
 ## 🧰 Tech Stack
 

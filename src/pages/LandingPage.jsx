@@ -1,38 +1,41 @@
 import React from 'react';
 import '../css/index.css';
 import { Link } from 'react-scroll';
+import { useState } from 'react';
 
 const LandingPage = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  
   return (
     <section className="relative flex flex-col justify-start items-center min-h-screen text-center bg-gray-800 grid grid-cols-8">
-      {/* Navbar */}
-      <nav className="w-full bg-gray-900 text-white col-start-1 col-end-9">
-        <div className="container mx-auto flex justify-between items-center">
-          {/* Logo dan Title */}
+      <nav className="w-full col-start-1 col-end-9 bg-gray-900 text-white">
+        <div className="container mx-auto flex justify-between items-center pr-4">
           <a href="/" className="flex items-center text-2xl font-bold">
-            {/* Logo */}
-            <img src="/icon.png" alt="Logo" className="mr-4 max-h-20" /> {/* Sesuaikan path dan ukuran logo */}
+            <img src="/icon.png" alt="Logo" className="mr-4 max-h-20" />
             MimicsLeads
           </a>
-          
-          {/* Menu */}
-          <ul className="flex space-x-8">
-            <li><Link 
-              to="about-us" 
-              smooth={true} 
-              duration={500} 
-              className="hover:text-blue-400">
-              About Me
-            </Link></li>
-            <li><Link 
-              to="how-to-use" 
-              smooth={true} 
-              duration={500} 
-              className="hover:text-blue-400">
-              How to Use
-            </Link></li>
+          <ul className="hidden md:flex space-x-8">
+            <li><Link to="about-us" smooth={true} duration={500} className="hover:text-blue-400">About Me</Link></li>
+            <li><Link to="how-to-use" smooth={true} duration={500} className="hover:text-blue-400">How to Use</Link></li>
             <li><a href="/generate_leads" className="hover:text-blue-400">Generate Leads</a></li>
             <li><a href="/setting_page" className="hover:text-blue-400">Settings</a></li>
+          </ul>
+
+          <button className="md:hidden text-white" onClick={toggleMenu}>
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+        <div className={`${menuOpen ? 'block' : 'hidden'} md:hidden bg-gray-800 text-white`}>
+          <ul className="space-y-4 p-4">
+            <li><Link to="about-us" smooth={true} duration={500} className="block hover:text-blue-400" onClick={toggleMenu}>About Me</Link></li>
+            <li><Link to="how-to-use" smooth={true} duration={500} className="block hover:text-blue-400" onClick={toggleMenu}>How to Use</Link></li>
+            <li><a href="/generate_leads" className="block hover:text-blue-400" onClick={toggleMenu}>Generate Leads</a></li>
+            <li><a href="/setting_page" className="block hover:text-blue-400" onClick={toggleMenu}>Settings</a></li>
           </ul>
         </div>
       </nav>
@@ -121,7 +124,7 @@ const LandingPage = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-5 content-stretch sm:flex-row gap-4 mt-6">
+            <div className="grid grid-cols-2 sm:grid-cols-5 content-stretch flex-row gap-4 mt-6">
                 <div className="social-item p-4 bg-gray-700 hover:bg-blue-500">
                     <a href="https://www.instagram.com/hauzantsaaqif" target="_blank" rel="noopener noreferrer">
                     <img src="\icon\5.png" alt="Instagram" className="social-icon" />
